@@ -26,11 +26,14 @@ public:
 
 int main()
 {
-    string napis;
+    string nazwa_pliku;
     trojkat przyklad;
 
+    cout << "Podaj nazwe pliku bez rozszerzenia: ";
+    cin >> nazwa_pliku;
+
     fstream plik;
-    plik.open("trojkaty2.txt", ios::in);
+    plik.open(nazwa_pliku +=".txt", ios::in);
     if (plik.good() == true)
     {
         while (!plik.eof())
